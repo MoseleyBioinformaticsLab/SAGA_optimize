@@ -1,7 +1,7 @@
-The SAGA-optimize Tutorial
+The SAGA_optimize Tutorial
 ==========================
 
-The `SAGA-optimize` package is a novel type of combined simulated annealing and genetic algorithm used to find the optimal solutions to a set of parameters based on a given energy function calculated using the set of parameters.
+The `SAGA_optimize` package is a novel type of combined simulated annealing and genetic algorithm used to find the optimal solutions to a set of parameters based on a given energy function calculated using the set of parameters.
 
 ElementDescription creation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# SAGA-optimize documentation build configuration file, created by
+# SAGA_optimize documentation build configuration file, created by
 # sphinx-quickstart on Sat Feb 23 16:11:07 2019.
 #
 # This file is execfile()d with the current directory set to its
@@ -54,7 +54,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'SAGA-optimize'
+project = 'SAGA_optimize'
 copyright = '2019, Huan Jin, Hunter N.B. Moseley'
 author = 'Huan Jin, Hunter N.B. Moseley'
 
@@ -120,7 +120,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'SAGA-optimizedoc'
+htmlhelp_basename = 'SAGA_optimizedoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -147,7 +147,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'SAGA-optimize.tex', 'SAGA-optimize Documentation',
+    (master_doc, 'SAGA_optimize.tex', 'SAGA_optimize Documentation',
      'Huan Jin, Hunter N.B. Moseley', 'manual'),
 ]
 
@@ -157,7 +157,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'saga-optimize', 'SAGA-optimize Documentation',
+    (master_doc, 'saga_optimize', 'SAGA_optimize Documentation',
      [author], 1)
 ]
 
@@ -168,8 +168,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'SAGA-optimize', 'SAGA-optimize Documentation',
-     author, 'SAGA-optimize', 'One line description of project.',
+    (master_doc, 'SAGA_optimize', 'SAGA_optimize Documentation',
+     author, 'SAGA_optimize', 'One line description of project.',
      'Miscellaneous'),
 ]
 

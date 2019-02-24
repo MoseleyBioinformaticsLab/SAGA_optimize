@@ -1,7 +1,7 @@
-SAGA-optimize
+SAGA_optimize
 =============
 
-`SAGA-optimize` is a novel type of combined simulated annealing and genetic algorithm used to find the optimal solutions to a set of parameters based on a given energy function calculated using the set of parameters.
+`SAGA_optimize` is a novel type of combined simulated annealing and genetic algorithm used to find the optimal solutions to a set of parameters based on a given energy function calculated using the set of parameters.
 
 Citation
 ~~~~~~~~
@@ -10,7 +10,7 @@ Please cite the GitHub repository until our manuscript is accepted for publicati
 Installation
 ~~~~~~~~~~~~
 
-`SAGA-optimize` runs under Python 3.6+ and is available through python3-pip. Install via pip or clone the git repo and install the following dependencies and you are ready to go!
+`SAGA_optimize` runs under Python 3.6+ and is available through python3-pip. Install via pip or clone the git repo and install the following dependencies and you are ready to go!
 
 Install on Linux
 ----------------
@@ -20,7 +20,7 @@ Pip installation
 
 .. code:: bash
 
-    python3 -m pip install SAGA-optimize
+    python3 -m pip install SAGA_optimize
 
 GitHub Package installation
 ...........................
@@ -32,7 +32,7 @@ Make sure you have git_ installed:
 Dependecies 
 ...........
 
-`SAGA-optimize` requires the following Python libraries:
+`SAGA_optimize` requires the following Python libraries:
     
     * JSONPickle_ for saving Python objects in a JSON serializable form and outputting to a file.
 
@@ -47,7 +47,7 @@ Quickstart
    >>>saga.addElementDescriptions(SAGA.ElementDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10), SAGA.ElemenDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10))        # Add optimized parameters.
    >>>optimized_population = saga.optimize()              # the population returned after the opitimization.
 
-.. note:: Read the User Guide and the ``SAGA-optimize`` Tutorial on ReadTheDocs_ to learn more and to see code examples on using the ``SAGA-optimize`` as a library.
+.. note:: Read the User Guide and the ``SAGA_optimize`` Tutorial on ReadTheDocs_ to learn more and to see code examples on using the ``SAGA_optimize`` as a library.
 
 License
 ~~~~~~~
