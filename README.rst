@@ -42,7 +42,7 @@ Quickstart
 
 .. code:: bash
 
-   >>>from SAGA_optimize import SAGA
+   >>>import SAGA
    >>>saga = SAGA.SAGA(stepNumber=100000, temperatureStepSize=100, startTemperature=0.5, alpha=1, direction=-1, energyCalculateion=energyCalculation, crossoverRate=0.5, mutationRate=3, annealMutationRate=1, populationSize=20)                  # SAGA instance creation.
    >>>saga.addElementDescriptions(SAGA.ElementDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10), SAGA.ElemenDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10))        # Add optimized parameters.
    >>>optimized_population = saga.optimize()              # the population returned after the opitimization.

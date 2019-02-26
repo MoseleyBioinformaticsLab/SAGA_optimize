@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=SAGA-optimize
+set SPHINXPROJ=SAGA_optimize
 
 if "%1" == "" goto help
 

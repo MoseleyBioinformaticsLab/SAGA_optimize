@@ -10,7 +10,7 @@ The creation of ElementDescription instance (optimized parameter) may need the r
 
    .. code:: Python
       
-      >>>from SAGA_optimize import SAGA
+      >>>import SAGA
       >>>element1 = SAGA.ElementDescription(low=0, high=10, name='element1')    # ElementDescription instance creation.
       >>>element2 = SAGA.ElementDescription(low=0, high=10, name='element2') 
       >>>element3 = SAGA.ElementDescription(low=0, high=10, name='element3') 
@@ -24,7 +24,7 @@ The Guess instance collects all the optimized parameters and their corresponding
  
    .. code:: Python
 
-      >>>from SAGA_optimize import SAGA
+      >>>import SAGA
       >>>values = [element.value for element in elements]
       >>>guess = SAGA.Guess(elements, values)     # Guess instance creation.
       >>>clonedGuess = guess.clone()              # Create a new guess by cloning the ElementDescriptions and the corresponding values of an existing guess instance.
@@ -36,7 +36,7 @@ The Population instance collects a group of Guess instanaces, aggregates informa
 
    .. code:: Python
 
-      >>>from SAGA_optimize import SAGA
+      >>>import SAGA
       >>>def energyCalculation(elements):     # example of energy calculation function definition.
       >>>   energy = 0
       >>>   for indedx in range(len(elements)):
@@ -53,7 +53,7 @@ The SAGA class is responsible for the optimization process. Optimization paramet
 
    .. code:: Python
    
-      >>>from SAGA_optimize import SAGA
+      >>>import SAGA
       >>>saga = SAGA.SAGA(stepNumber=100000, temperatureStepSize=100, startTemperature=0.5, alpha=1, direction=-1, energyCalculateion=energyCalculation, crossoverRate=0.5, mutationRate=3, annealMutationRate=1, populationSize=20)                     # SAGA instance creation.
       >>>saga.addElementDescriptions(SAGA.ElementDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10), SAGA.ElemenDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10))           # Add optimized parameters.
       >>>optimized_population = saga.optimize()              # the population returned after the opitimization.
