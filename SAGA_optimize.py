@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
 """
-SAGA_optimize.SAGA
+SAGA_optimize
 ~~~~~~~~~~~~~~~~~~~~
 
-This module provides the :class:`~SAGA_optimize.SAGA.SAGA` class to find the optimal solutions to a set of parameters
-based on a given energy function with the simulated annealing and genetic algorithm, and the :class:`~SAGA_optimize.SAGA.ElementDescription`
-class describing the parameter. The :class:`~SAGA_optimize.SAGA.Guess` class stores a set of :class:`~SAGA_optimize.SAGA.ElementDescription`
-instances to a given energy function and the :class:`~SAGA_optimize.SAGA.Population` class collects a group of :class:`~SAGA_optimize.SAGA.Guess`
+This module provides the :class:`~SAGA_optimize.SAGA` class to find the optimal solutions to a set of parameters
+based on a given energy function with the simulated annealing and genetic algorithm, and the :class:`~SAGA_optimize.ElementDescription`
+class describing the parameter. The :class:`~SAGA_optimize.Guess` class stores a set of :class:`~SAGA_optimize.ElementDescription`
+instances to a given energy function and the :class:`~SAGA_optimize.Population` class collects a group of :class:`~SAGA_optimize.Guess`
 instances.
 
 """

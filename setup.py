@@ -16,7 +16,7 @@ setup(
     keywords="optimization inverse problem simulated annealing genetic algorithm",
     license='BSD',
     url='https://hji236@gitlab.cesb.uky.edu/hji236/SAGA_optimize.git',
-    py_modules=['SAGA'],
+    py_modules=['SAGA_optimize'],
     install_requires=['jsonpickle'],
     platforms='any',
     long_description=open('README.rst').read(),
