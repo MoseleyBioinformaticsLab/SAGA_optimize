@@ -1,5 +1,5 @@
 
-.. automodule:: SAGA
+.. automodule:: SAGA_optimize
     :member-order: bysource
     :members:
     :special-members:

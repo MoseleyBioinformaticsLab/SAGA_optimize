@@ -10,11 +10,11 @@ The creation of ElementDescription instance (optimized parameter) may need the r
 
    .. code:: Python
       
-      >>>import SAGA
-      >>>element1 = SAGA.ElementDescription(low=0, high=10, name='element1')    # ElementDescription instance creation.
-      >>>element2 = SAGA.ElementDescription(low=0, high=10, name='element2') 
-      >>>element3 = SAGA.ElementDescription(low=0, high=10, name='element3') 
-      >>>element4 = SAGA.ElementDescription(low=0, high=10, name='element4')
+      >>>import SAGA_optimize
+      >>>element1 = SAGA_optimize.ElementDescription(low=0, high=10, name='element1')    # ElementDescription instance creation.
+      >>>element2 = SAGA_optimize.ElementDescription(low=0, high=10, name='element2') 
+      >>>element3 = SAGA_optimize.ElementDescription(low=0, high=10, name='element3') 
+      >>>element4 = SAGA_optimize.ElementDescription(low=0, high=10, name='element4')
       >>>elements = [element1, element2, element3, element4] 
 
 Guess creation
@@ -24,9 +24,9 @@ The Guess instance collects all the optimized parameters and their corresponding
  
    .. code:: Python
 
-      >>>import SAGA
+      >>>import SAGA_optimize
       >>>values = [element.value for element in elements]
-      >>>guess = SAGA.Guess(elements, values)     # Guess instance creation.
+      >>>guess = SAGA_optimize.Guess(elements, values)     # Guess instance creation.
       >>>clonedGuess = guess.clone()              # Create a new guess by cloning the ElementDescriptions and the corresponding values of an existing guess instance.
 
 Population creation
@@ -36,13 +36,13 @@ The Population instance collects a group of Guess instanaces, aggregates informa
 
    .. code:: Python
 
-      >>>import SAGA
+      >>>import SAGA_optimize
       >>>def energyCalculation(elements):     # example of energy calculation function definition.
       >>>   energy = 0
       >>>   for indedx in range(len(elements)):
       >>>      energy += abs(index+1-elements[index])
       >>>   return energy
-      >>>population = SAGA.Population(20, elements, energyCalculation)   # Population instance creation.
+      >>>population = SAGA_optimize.Population(20, elements, energyCalculation)   # Population instance creation.
       >>>bestIndex = population.bestIndex     # Get the index of the best Guess among the Population.
       >>>bestGuess = population.bestGuess     # Get the best Guess instance of the Population instance.
 
@@ -53,8 +53,8 @@ The SAGA class is responsible for the optimization process. Optimization paramet
 
    .. code:: Python
    
-      >>>import SAGA
-      >>>saga = SAGA.SAGA(stepNumber=100000, temperatureStepSize=100, startTemperature=0.5, alpha=1, direction=-1, energyCalculateion=energyCalculation, crossoverRate=0.5, mutationRate=3, annealMutationRate=1, populationSize=20)                     # SAGA instance creation.
-      >>>saga.addElementDescriptions(SAGA.ElementDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10), SAGA.ElemenDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10))           # Add optimized parameters.
+      >>>import SAGA_optimize
+      >>>saga = SAGA_optimize.SAGA(stepNumber=100000, temperatureStepSize=100, startTemperature=0.5, alpha=1, direction=-1, energyCalculateion=energyCalculation, crossoverRate=0.5, mutationRate=3, annealMutationRate=1, populationSize=20)                     # SAGA instance creation.
+      >>>saga.addElementDescriptions(SAGA_optimize.ElementDescription(low=0, high=10), SAGA_optimize.ElementDescription(low=0, high=10), SAGA_optimize.ElemenDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10), SAGA_optimize.ElementDescription(low=0, high=10))           # Add optimized parameters.
       >>>optimized_population = saga.optimize()              # the population returned after the opitimization.
       

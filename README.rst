@@ -5,7 +5,7 @@ SAGA_optimize
 
 Citation
 ~~~~~~~~
-Please cite the GitHub repository until our manuscript is accepted for publications:
+Please cite the GitHub repository until our manuscript is accepted for publications: https://github.com/MoseleyBioinformaticsLab/SAGA_optimize.git
 
 Installation
 ~~~~~~~~~~~~
@@ -20,7 +20,7 @@ Pip installation
 
 .. code:: bash
 
-    python3 -m pip install SAGA_optimize
+    pip3 install SAGA-optimize
 
 GitHub Package installation
 ...........................
@@ -28,6 +28,9 @@ GitHub Package installation
 Make sure you have git_ installed:
 
 .. code:: bash 
+ 
+   cd ~/
+   git clone https://github.com/MoseleyBioinformaticsLab/SAGA_optimize.git
     
 Dependecies 
 ...........
@@ -42,9 +45,9 @@ Quickstart
 
 .. code:: bash
 
-   >>>import SAGA
-   >>>saga = SAGA.SAGA(stepNumber=100000, temperatureStepSize=100, startTemperature=0.5, alpha=1, direction=-1, energyCalculateion=energyCalculation, crossoverRate=0.5, mutationRate=3, annealMutationRate=1, populationSize=20)                  # SAGA instance creation.
-   >>>saga.addElementDescriptions(SAGA.ElementDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10), SAGA.ElemenDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10), SAGA.ElementDescription(low=0, high=10))        # Add optimized parameters.
+   >>>import SAGA_optimize
+   >>>saga = SAGA_optimize.SAGA(stepNumber=100000, temperatureStepSize=100, startTemperature=0.5, alpha=1, direction=-1, energyCalculateion=energyCalculation, crossoverRate=0.5, mutationRate=3, annealMutationRate=1, populationSize=20)                  # SAGA instance creation.
+   >>>saga.addElementDescriptions(SAGA_optimize.ElementDescription(low=0, high=10), SAGA_optimize.ElementDescription(low=0, high=10), SAGA_optimize.ElemenDescription(low=0, high=10), SAGA_optimize.ElementDescription(low=0, high=10), SAGA_optimize.ElementDescription(low=0, high=10))        # Add optimized parameters.
    >>>optimized_population = saga.optimize()              # the population returned after the opitimization.
 
 .. note:: Read the User Guide and the ``SAGA_optimize`` Tutorial on ReadTheDocs_ to learn more and to see code examples on using the ``SAGA_optimize`` as a library.
@@ -62,7 +65,7 @@ Authors
 * **Huan Jin**
 * **Hunter N.B. Moseley**
 
-.. _ReadTheDocs: 
+.. _ReadTheDocs: https://saga-optimize.readthedocs.io/en/latest/
 .. _jsonpickle: https://jsonpickle.github.io/
 .. _git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/
 .. _LICENSE: 

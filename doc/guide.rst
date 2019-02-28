@@ -19,7 +19,7 @@ Pip installation (method 1)
 
 .. code:: bash
 
-    python3 -m pip install SAGA_optimize
+    pip3 install SAGA-optimize
 
 GitHub Package installation (method 2)
 ......................................
@@ -27,6 +27,9 @@ GitHub Package installation (method 2)
 Make sure you have git_ installed:
 
 .. code:: bash
+   
+   cd ~/
+   git clone https://github.com/MoseleyBioinformaticsLab/SAGA_optimize.git
     
 Dependecies 
 ...........

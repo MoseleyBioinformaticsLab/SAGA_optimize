@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-SAGA_optimize
-~~~~~~~~~~~~~~~~~~~~
+SAGA_optimize.py
+~~~~~~~~~~~~~~~~
 
 This module provides the :class:`~SAGA_optimize.SAGA` class to find the optimal solutions to a set of parameters
 based on a given energy function with the simulated annealing and genetic algorithm, and the :class:`~SAGA_optimize.ElementDescription`
@@ -79,13 +79,13 @@ class ElementDescription:
 
 
 class Guess:
-    """Guess class collects all the optimized parameters (:class:`~SAGA_optimize.SAGA.ElementDescription` instances) to a given energy function."""
+    """Guess class collects all the optimized parameters (:class:`~SAGA_optimize.ElementDescription` instances) to a given energy function."""
 
     def __init__(self, elementDescriptions, elements, energy=0):
         """Guess initializer.
 
-        :param list elementDescriptions: a list of :class:`~SAGA_optimize.SAGA.ElementDescription` instances.
-        :param list elements: a list of values for the corresponding :class:`~SAGA_optimize.SAGA.ElementDescription` instances.
+        :param list elementDescriptions: a list of :class:`~SAGA_optimize.ElementDescription` instances.
+        :param list elements: a list of values for the corresponding :class:`~SAGA_optimize.ElementDescription` instances.
         :param double energy: the energy of the Guess to the given function.
         """
         self.elementDescriptions = elementDescriptions
@@ -96,7 +96,7 @@ class Guess:
         """Clones everything but the energy.
 
         :return: the Guess instance.
-        :rtype: :class:`~SAGA_optimize.SAGA.Guess`
+        :rtype: :class:`~SAGA_optimize.Guess`
         """
         return Guess(self.elementDescriptions, self.elements)
 
@@ -120,11 +120,11 @@ class Population:
 
     def __init__(self, size, elementDescriptions, energyCalculation, direction=-1, initialPopulation=None):
         """
-        :param int size: the number of :class:`~SAGA_optimize.SAGA.Guess` instances in the population.
-        :param list elementDescriptions: a list of :class:`~SAGA_optimize.SAGA.ElementDescription` instances in the :class:`~SAGA_optimize.SAGA.Guess`.
+        :param int size: the number of :class:`~SAGA_optimize.Guess` instances in the population.
+        :param list elementDescriptions: a list of :class:`~SAGA_optimize.ElementDescription` instances in the :class:`~SAGA_optimize.Guess`.
         :param energyCalculation: the given energy function.
         :param int direction: (1 or -1) for determining lowest energy.
-        :param initialPopulation: an initial :class:`~SAGA_optimize.SAGA.Population` instance.
+        :param initialPopulation: an initial :class:`~SAGA_optimize.Population` instance.
         """
         self.guesses = []
         self.elementDescriptions = elementDescriptions
@@ -235,11 +235,11 @@ class SAGA:
         :param int populationSize: size of the population of Guesses.
         :param energyCalculation: function to calculate the energy.
         :param int direction: optimization direction; 1 is maximizing; -1 is minimizing; DEFAULT is -1.
-        :param list elementDescriptions: OPTIONAL - list of :class:`~SAGA_optimize.SAGA.ElementDescription` instances.
-        :param startPopulation: OPTIONAL - :class:`~SAGA_optimize.SAGA.Population` instance to use as the starting population.
-        :type startPopulation: :class:`~SAGA_optimize.SAGA.Population`
-        :param initialPopulation: OPTIONAL - :class:`~SAGA_optimize.SAGA.Population` instance to initialize with.
-        :type initialPopulation: :class:`~SAGA_optimize.SAGA.Population`
+        :param list elementDescriptions: OPTIONAL - list of :class:`~SAGA_optimize.ElementDescription` instances.
+        :param startPopulation: OPTIONAL - :class:`~SAGA_optimize.Population` instance to use as the starting population.
+        :type startPopulation: :class:`~SAGA_optimize.Population`
+        :param initialPopulation: OPTIONAL - :class:`~SAGA_optimize.Population` instance to initialize with.
+        :type initialPopulation: :class:`~SAGA_optimize.Population`
         :param double crossoverRate: fractional rate of crossover versus mutation; DEFAULT is 0.1.
         :param int mutationRate: number of mutations to perform in creating a new Guess; DEFAULT is 1.
         :param annealMutationRate: whether to anneal mutationRate with temperature; DEFAULT is 1.
@@ -274,15 +274,15 @@ class SAGA:
     def addElementDescriptions(self, *elementDescriptions):
         """Add elementDescriptions.
 
-        :param elementDescriptions: the :class:`~SAGA_optimize.SAGA.ElementDescription` instance.
-        :type elementDescriptions: :class:`~SAGA_optimize.SAGA.ElementDescription`
+        :param elementDescriptions: the :class:`~SAGA_optimize.ElementDescription` instance.
+        :type elementDescriptions: :class:`~SAGA_optimize.ElementDescription`
         """
         self.elementDescriptions.extend(elementDescriptions)
 
     def optimize(self):
         """Performs the optimization.
 
-        :return: :class:`~SAGA_optimize.SAGA.Population`.
+        :return: :class:`~SAGA_optimize.Population`.
         """
         if self.startPopulation:
             self.populationSize = len(self.startPopulation.guesses)
