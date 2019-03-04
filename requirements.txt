@@ -1,2 +1,1 @@
 jsonpickle==0.9.5
-nbsphinx==0.4.2
