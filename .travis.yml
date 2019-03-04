@@ -1,0 +1,26 @@
+language: python
+# install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install codecov
+  - pip install pytest-cov
+# run tests
+jobs:
+  include:
+    - stage: test
+      python: '3.4'
+      script:
+        - python -m pytest -v
+    - stage: test
+      python: '3.5'
+      script:
+        - python -m pytest -v
+    - stage: test
+      python: '3.6'
+      script:
+        - python -m pytest -v
+    - stage: test
+      python: '3.7'
+      dist: xenial
+      script:
+        - python -m pytest -v
