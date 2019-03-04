@@ -1,6 +1,25 @@
 SAGA_optimize
 =============
 
+
+.. image:: https://img.shields.io/pypi/l/SAGA_optimize.svg
+   :target: https://choosealicense.com/licenses/bsd-3-clause-clear/
+   :alt: License information
+
+.. image:: https://img.shields.io/pypi/v/SAGA_optimize.svg
+   :target: https://pypi.org/project/SAGA_optimize
+   :alt: Current library version
+
+.. image:: https://img.shields.io/pypi/pyversions/SAGA_optimize.svg
+   :target: https://pypi.org/project/SAGA_optimize
+   :alt: Supported Python versions
+
+.. image:: https://api.travis-ci.org/MoseleyBioinformaticsLab/SAGA_optimize.svg?branch=master
+   :target: https://travis-ci.org/MoseleyBioinformaticsLab/SAGA_optimize
+   :alt: Travis CI status
+
+
+
 `SAGA_optimize` is a novel type of combined simulated annealing and genetic algorithm used to find the optimal solutions to a set of parameters based on a given energy function calculated using the set of parameters.
 
 Citation
