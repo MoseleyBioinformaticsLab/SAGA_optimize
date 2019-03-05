@@ -3,12 +3,7 @@ The SAGA_optimize Tutorial
 
 The `SAGA_optimize` package is a novel type of combined simulated annealing and genetic algorithm used to find the optimal solutions to a set of parameters based on a given energy function calculated using the set of parameters.
 
-ElementDescription creation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The creation of ElementDescription instance (optimized parameter) may need the range of the parameter, and its name. Default value and mutation function can be provided. Please refer to the API documentation for detailed information.
-
-First, we need define an energy function.
+To perform `SAGA_optimize`, we need define an energy function first.
 
    .. code:: Python
       
@@ -17,6 +12,8 @@ First, we need define an energy function.
       >>>    for indedx in range(len(elements)):
       >>>       energy += abs(index+1-elements[index])
       >>>    return energy
+
+Then we need to construct the parameters (ElementDescription instances) for optimization. ElementDescription instance initialization may require the range of the parameter, and its name. Default value and mutation function can also be provided. Please refer to the API documentation for detailed information.
 
 We can construct ElementDescription instances first, and then pass them into SAGA.
       
@@ -45,7 +42,7 @@ Or we can create SAGA instance first, and then add the ElementDescirption instan
                                       SAGA_optimize.ElemenTDescription(low=0, high=10, name='element3'), SAGA_optimize.ElementDescription(low=0, high=10, name='element4'), 
                                       SAGA_optimize.ElementDescription(low=0, high=10, name='element5'))           # Add optimized parameters.
 
-Next, we can conduct optimization process.
+Next, we can conduct optimization.
 
    .. code:: Python
 
