@@ -4,7 +4,7 @@ import os
 import sys
 import re
 from setuptools import setup
-from SAGA import __version__
+from SAGA_optimize import __version__
 
 
 setup(
