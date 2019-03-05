@@ -65,8 +65,14 @@ Quickstart
 .. code:: python
 
    >>> import SAGA_optimize
-   >>> saga = SAGA_optimize.SAGA(stepNumber=100000, temperatureStepSize=100, startTemperature=0.5, alpha=1, direction=-1, energyCalculateion=energyCalculation, crossoverRate=0.5, mutationRate=3, annealMutationRate=1, populationSize=20)                  # SAGA instance creation.
-   >>> saga.addElementDescriptions(SAGA_optimize.ElementDescription(low=0, high=10), SAGA_optimize.ElementDescription(low=0, high=10), SAGA_optimize.ElemenDescription(low=0, high=10), SAGA_optimize.ElementDescription(low=0, high=10), SAGA_optimize.ElementDescription(low=0, high=10))        # Add optimized parameters.
+   >>> saga = SAGA_optimize.SAGA(stepNumber=100000, temperatureStepSize=100, startTemperature=0.5, 
+                                 alpha=1, direction=-1, energyCalculation=energyCalculation, crossoverRate=0.5, 
+                                 mutationRate=3, annealMutationRate=1, populationSize=20)                  # SAGA instance creation.
+   >>> saga.addElementDescriptions(SAGA_optimize.ElementDescription(low=0, high=10), 
+				   SAGA_optimize.ElementDescription(low=0, high=10), 
+                                   SAGA_optimize.ElementDescription(low=0, high=10), 
+                                   SAGA_optimize.ElementDescription(low=0, high=10), 
+                                   SAGA_optimize.ElementDescription(low=0, high=10))        # Add optimized parameters.
    >>> optimized_population = saga.optimize()              # the population returned after the opitimization.
 
 .. note:: Read the User Guide and the ``SAGA_optimize`` Tutorial on ReadTheDocs_ to learn more and to see code examples on using the ``SAGA_optimize`` as a library.

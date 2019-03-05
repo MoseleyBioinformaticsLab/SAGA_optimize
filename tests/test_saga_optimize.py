@@ -28,8 +28,9 @@ def test_saga_optimize():
     optimized_population = saga.optimize()
     bestGuess = optimized_population.bestGuess
 
+    standardResults = [0.010800440413622603, 0.9986605131302921, 2.0049781612156004, 3.0036003043186144, 3.999532176465393, 5.000414664475093]
     for i in range(len(bestGuess.elements)):
-        assert abs(bestGuess.elements[i] - 1 - i) < math.pow(10, -6)
+        assert abs(bestGuess.elements[i] - standardResults[i]) < math.pow(10, -6)
 
 
 
