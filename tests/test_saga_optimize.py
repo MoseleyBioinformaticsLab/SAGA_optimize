@@ -1,5 +1,8 @@
 import SAGA_optimize
 import math
+import random
+
+random.seed(9001)
 
 
 def energyCalculation(elements):
@@ -26,7 +29,7 @@ def test_saga_optimize():
     bestGuess = optimized_population.bestGuess
 
     for i in range(len(bestGuess.elements)):
-        assert abs(bestGuess.elements[i] - 1 - i) < math.pow(10, -2)
+        assert abs(bestGuess.elements[i] - 1 - i) < math.pow(10, -6)
 
 
 
