@@ -16,7 +16,7 @@ import random
 import math
 import jsonpickle
 
-__version__ = '1.0.1.post1'
+__version__ = '1.0.1.post2'
 
 
 class ElementDescription:
