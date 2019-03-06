@@ -1,26 +1,31 @@
 language: python
-# install dependencies
 install:
-  - pip install -r requirements.txt
-  - pip install codecov
-  - pip install pytest-cov
-# run tests
+- pip install -r requirements.txt
+- pip install codecov
+- pip install pytest-cov
 jobs:
   include:
-    - stage: test
-      python: '3.4'
-      script:
-        - python -m pytest -v
-    - stage: test
-      python: '3.5'
-      script:
-        - python -m pytest -v
-    - stage: test
-      python: '3.6'
-      script:
-        - python -m pytest -v
-    - stage: test
-      python: '3.7'
-      dist: xenial
-      script:
-        - python -m pytest -v
+  - stage: test
+    python: '3.4'
+    script:
+    - python -m pytest -v
+  - stage: test
+    python: '3.5'
+    script:
+    - python -m pytest -v
+  - stage: test
+    python: '3.6'
+    script:
+    - python -m pytest -v
+  - stage: test
+    python: '3.7'
+    dist: xenial
+    script:
+    - python -m pytest -v
+deploy:
+  provider: pypi
+  user: 'HuanJin95'
+  password:
+    secure: TLpL7KdP6EpUJRB69zEMi1RBl29uefP18M3fshyPpDPzq84KwR5N5yGMOWzs7BVVP9SQZux3yzFABGGooq2sDMwuOWWYK1GAVaJt+uPJL3is2QD1oeoZN2o7wf/ZVpKVSJF5jFBrhYQGHF0x6u8egQ1AekvmpqRbGenCOi+upuBV2U3w98OEzXBBAWxNwGU+nJSjQf9cog7df/zioZSCgMqEOplAu5m396Ty5F3OWmp4dUtzu2LQQteCG6Iypb5sVSPJdxs0pa6e3ejZAVc7tHLnqrliwraaCs95ZVLdInw4oKKgCatv9xfBFybfZ9qCv5DX5snbQqFHEpr8cD5zMNobKRKfrI/yWV/ovQW3TcJsLjeLheAXmhfUlrmmxZ/exjnZ8A509N7GP7QnHHg1VtIpxEM1xL0/1k3aOOCPSNjDbGQcszvaOyox2WIrOyKsjpesrkw2Cp2p3TzNdgFEJzWGgxGexLnT5JPQi3O9k6WTj9rUIW3j+FlQh2Xt1sMh3LYa9d4GBaHZ0dOBOmDI0KkDS587+5oINw5K0YKWVr0ID7fMuHGjlQSDkheVO7LVvRNBNprrw9FlHDCEvEhhziBSPE6jaSqxoRUWHGBfEIvyZbYdCVs4fy3FWyUiJFEH5RigtF/HUkElG8V8yiJpdoVuXOFsN2SLEyWIhhBhVCE=
+  on:
+    tags: true
