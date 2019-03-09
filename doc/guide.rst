@@ -4,7 +4,7 @@ User Guide
 Description
 ~~~~~~~~~~~
 
-The :mod:`SAGA_optimize` package provides a simple Python interface for solving boundary-value inverse problem based on the simulated annealing and genetic algorithm. 
+The :mod:`SAGA_optimize` package provides a simple Python application programming interface for solving boundary-value inverse problem based on a simulated annealing and genetic algorithm. 
 
 Installation
 ~~~~~~~~~~~~

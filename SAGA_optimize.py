@@ -5,9 +5,9 @@ SAGA_optimize.py
 ~~~~~~~~~~~~~~~~
 
 This module provides the :class:`~SAGA_optimize.SAGA` class to find the optimal solutions to a set of parameters
-based on a given energy function with the simulated annealing and genetic algorithm, and the :class:`~SAGA_optimize.ElementDescription`
-class describing the parameter. The :class:`~SAGA_optimize.Guess` class stores a set of :class:`~SAGA_optimize.ElementDescription`
-instances to a given energy function and the :class:`~SAGA_optimize.Population` class collects a group of :class:`~SAGA_optimize.Guess`
+based on a given energy function with a simulated annealing and genetic algorithm. The :class:`~SAGA_optimize.ElementDescription`
+class describes a parameter. The :class:`~SAGA_optimize.Guess` class stores a set of :class:`~SAGA_optimize.ElementDescription`
+instances to a given energy function and the :class:`~SAGA_optimize.Population` class contains a group of :class:`~SAGA_optimize.Guess`
 instances.
 
 """
@@ -20,7 +20,7 @@ __version__ = '1.0.1.post2'
 
 
 class ElementDescription:
-    """ ElementDescription class describes the optimized parameter to a given energy function."""
+    """ ElementDescription class describes an optimized parameter to a given energy function."""
 
     def __init__(self, low=0, high=0, name='', value=None, mutate=None):
         """ElementDescription initializer.
@@ -79,14 +79,14 @@ class ElementDescription:
 
 
 class Guess:
-    """Guess class collects all the optimized parameters (:class:`~SAGA_optimize.ElementDescription` instances) to a given energy function."""
+    """Guess class collects all the optimized parameter values related to a list of :class:`~SAGA_optimize.ElementDescription` instances."""
 
     def __init__(self, elementDescriptions, elements, energy=0):
         """Guess initializer.
 
         :param list elementDescriptions: a list of :class:`~SAGA_optimize.ElementDescription` instances.
         :param list elements: a list of values for the corresponding :class:`~SAGA_optimize.ElementDescription` instances.
-        :param double energy: the energy of the Guess to the given function.
+        :param double energy: the energy of the Guess calculated from an energy function.
         """
         self.elementDescriptions = elementDescriptions
         self.elements = elements
@@ -116,7 +116,7 @@ class Guess:
 
 
 class Population:
-    """Population class collects a set of Guess instances."""
+    """Population class which contains a group of Guess instances."""
 
     def __init__(self, size, elementDescriptions, energyCalculation, direction=-1, initialPopulation=None):
         """
@@ -221,7 +221,7 @@ class Population:
 
 
 class SAGA:
-    """ Implements a stimulated annealing / genetic algorithm optimization strategy. """
+    """ Implements a simulated annealing / genetic algorithm optimization strategy. """
 
     def __init__(self, stepNumber, startTemperature, temperatureStepSize, alpha, populationSize, energyCalculation, direction=-1,
                  elementDescriptions=None, startPopulation=None, initialPopulation=None, crossoverRate=0.1, crossover=None, acceptedCriteria=None,
@@ -244,8 +244,8 @@ class SAGA:
         :param int mutationRate: number of mutations to perform in creating a new Guess; DEFAULT is 1.
         :param annealMutationRate: whether to anneal mutationRate with temperature; DEFAULT is 1.
         :param double maxEnergy: OPTIONAL - override of maxEnergy for SA calculation.
-        :param validGuess: function that tests if a Guess object is valid. DEFAULT is None.
-        :param bestOperation: function to perform on best Guess object; DEFAULT is None.
+        :param validGuess: function that tests if a Guess instance is valid. DEFAULT is None.
+        :param bestOperation: function to perform on best Guess instance; DEFAULT is None.
         """
         self.elementDescriptions = [] if elementDescriptions is None else elementDescriptions
         self.stepNumber = stepNumber
