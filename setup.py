@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
-import os
-import sys
-import re
+
 from setuptools import setup
 from SAGA_optimize import __version__
 
@@ -30,6 +28,7 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
 
     ]
 
