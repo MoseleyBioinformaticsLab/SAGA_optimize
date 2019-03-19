@@ -13,9 +13,9 @@ setup(
     description='Optimization method for solving boundary-value inverse problem based on a combined simulated annealing and genetic algorithm',
     keywords="optimization inverse problem simulated annealing genetic algorithm",
     license='BSD',
-    url='https://hji236@gitlab.cesb.uky.edu/hji236/SAGA_optimize.git',
+    url='https://github.com/MoseleyBioinformaticsLab/SAGA_optimize.git',
     py_modules=['SAGA_optimize'],
-    install_requires=['jsonpickle'],
+    install_requires=['jsonpickle >= 0.9.5'],
     platforms='any',
     long_description=open('README.rst').read(),
     classifiers=[

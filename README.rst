@@ -106,4 +106,4 @@ Authors
 .. _ReadTheDocs: https://saga-optimize.readthedocs.io/en/latest/
 .. _jsonpickle: https://jsonpickle.github.io/
 .. _git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/
-.. _LICENSE: 
+.. _LICENSE: https://choosealicense.com/licenses/bsd-3-clause-clear/
