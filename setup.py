@@ -1,13 +1,21 @@
 #!/usr/bin/python3
 
-
+import re
 from setuptools import setup
-from SAGA_optimize import __version__
 
+
+def find_version():
+    with open('SAGA_optimize.py', 'r') as fd:
+        version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
+                            fd.read(), re.MULTILINE).group(1)
+    if not version:
+        raise RuntimeError('Cannot find version information')
+    return version
 
 setup(
+
     name='SAGA_optimize',
-    version=__version__,
+    install_requires=['jsonpickle >= 0.9.5'],
     author='Huan Jin',
     author_email='hji236@g.uky.edu',
     description='Optimization method for solving boundary-value inverse problem based on a combined simulated annealing and genetic algorithm',
@@ -15,7 +23,7 @@ setup(
     license='BSD',
     url='https://github.com/MoseleyBioinformaticsLab/SAGA_optimize.git',
     py_modules=['SAGA_optimize'],
-    install_requires=['jsonpickle >= 0.9.5'],
+    version=find_version(),
     platforms='any',
     long_description=open('README.rst').read(),
     classifiers=[
