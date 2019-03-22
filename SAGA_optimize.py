@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-SAGA_optimize.py
-~~~~~~~~~~~~~~~~
+SAGA_optimize API Reference
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This module provides the :class:`~SAGA_optimize.SAGA` class to find the optimal solutions to a set of parameters
 based on a given energy function with a simulated annealing and genetic algorithm. The :class:`~SAGA_optimize.ElementDescription`

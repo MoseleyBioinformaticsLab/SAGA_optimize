@@ -10,9 +10,9 @@ Welcome to SAGA_optimize's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   api
    guide
    tutorial
+   api
 
 
 

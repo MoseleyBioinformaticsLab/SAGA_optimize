@@ -28,7 +28,6 @@ Make sure you have git_ installed:
 
 .. code:: bash
    
-   cd ~/
    git clone https://github.com/MoseleyBioinformaticsLab/SAGA_optimize.git
     
 Dependecies 
