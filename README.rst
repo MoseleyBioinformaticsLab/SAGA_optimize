@@ -92,8 +92,6 @@ Quickstart
 License
 ~~~~~~~
 
-.. include:: ../LICENSE
-
 Made available under the terms of The Clear BSD License. See full license in LICENSE_.
 
 Authors
