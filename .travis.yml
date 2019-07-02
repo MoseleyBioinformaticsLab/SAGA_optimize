@@ -8,24 +8,20 @@ jobs:
   - stage: test
     python: '3.4'
     script:
-    - python -m pytest -v
+    - python -m pytest -v --cov=./SAGA_optimize
   - stage: test
     python: '3.5'
     script:
-    - python -m pytest -v
+    - python -m pytest -v --cov=./SAGA_optimize
   - stage: test
     python: '3.6'
     script:
-    - python -m pytest -v
+    - python -m pytest -v --cov=./SAGA_optimize
   - stage: test
     python: '3.7'
     dist: xenial
     script:
-    - python -m pytest -v
-deploy:
-  provider: pypi
-  user: HuanJin95
-  password:
-    secure: oJhM7KgqBSI9iwVLHxpLChzaVtKgDBaHloJLpRt09deCjoGHhuIAGTuLyToj7mbN0sKcZVIT3RXhHaF5ZZcOtJQ1usQaumDIaXzSW8cKb4681E3tiwaD0iqHFDRC0SL/JbYh56LagycigWcJNe3DXQD4ZaUM2SGYleYyqyEV4JOY4qItWHAKxXrIviLk6gXPHUg8+eEVeNRUJumaG09WZ0vRKqWaTurBWJrdjRREgnKU5lyLNC2laziNyVtn6xVNp87oiS+xMeT3s0FxpzkxD9ZJGOxYMscTiZStcbH1KpEbg5DGaAgLTu7FJ+QjCO/P5MHFinKCZoaBFYTSV/XyY+smPq9ZOdn8ho1X3bOA9hYiZ4/7bKntEVvTpYKTuwmkGwtCpHvfJ7g1L0XhvL02wqqicytQIb2GaAZc4BnonQYscgeLuTlLYw3QcjoIrcUcneH+iBbRkJGnZXHoH+mqJwECGhx5IIbk0DeAzNao+BcmEoNlAckGL+q7GaneFzP2tVFX0nlamEUbyAOWWs59QvP7txFhOD39qpWejcHGjXdZz2B31tk2bkOBNmm714Yf4gw0I0BWUMkDfdWgq7Ha04eBA/tdo553bzChzjYKIZyAMiykceOd+9R+Jc7enY1OAo7wTx4RBNe6VciagO4vLcE1FC2kP+38lunLSsW44uE=
-  on:
-    tags: true
+    - python -m pytest -v --cov=./SAGA_optimize
+
+after_success:
+  - codecov
